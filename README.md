@@ -57,6 +57,8 @@ Access the application @ http://127.0.0.1:5000
 
 # Challenges
 
+Find the flag and implement a mitigation strategie.
+
 ## 1. Prompt Injection
 
 A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model.

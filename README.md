@@ -57,7 +57,7 @@ Access the application @ http://127.0.0.1:5000
 
 # Challenges
 
-## Prompt Injection
+## 1. Prompt Injection
 
 A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model.
 
@@ -71,7 +71,7 @@ Application URL: http://127.0.0.1:5001
 **Hint:** External URL feature can help
 
 
-## Data and Model Poisoning
+## 2. Data and Model Poisoning
 
 Data poisoning occurs when pre-training, fine-tuning, or embedding data is manipulated to introduce vulnerabilities, backdoors, or biases. This manipulation can compromise model security, performance, or ethical behavior, leading to harmful outputs or impaired capabilities. Common risks include degraded model performance, biased or toxic content, and exploitation of downstream systems.
 
@@ -85,7 +85,7 @@ Application URL: http://127.0.0.1:5004
 **Hint:** Identify the source
 
 
-## Improper Output Handling
+## 3. Improper Output Handling
 
 Improper Output Handling occurs when an LLM generates outputs that are not properly validated or constrained, potentially leading to security vulnerabilities. Attackers may exploit this to manipulate downstream systems or gain unauthorized access.
 

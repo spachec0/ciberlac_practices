@@ -1,112 +1,111 @@
 # Ciberlac LLM Security Practices 
 
-## This project is intended for AI Security professionals to explore potential security risks in LLMs and learn effective mitigation strategies.
+## Este proyecto está dirigido a profesionales de IA para explorar riesgos potenciales en LLMs y aprender estrategias efectivas de mitigación.
 
-## Overview (No API Key required)
+## Resumen
 
-The project is primarily developed using Python and the Ollama framework, with the open source LLM models. The exercises are structured in the form of **CTF (Capture The Flag) challenges**, each with a clear objective, optional hints, and a flag awarded upon successful completion.
+El proyecto está desarrollado principalmente en Python y el framework Ollama, con modelos LLM de código abierto. Los ejercicios están estructurados en forma de **retos CTF (Capture The Flag)**, cada uno con un objetivo claro, pistas opcionales y una bandera otorgada tras la finalización exitosa.
 
-## Gettting started
+## Primeros pasos
 
-This guide provides instructions for setting up and running the challenges.
+Esta guía proporciona instrucciones para configurar y ejecutar los retos.
 
-### Prerequisites
+### Requisitos previos
 
-* Python 3.10 or higher
-* pip (Python package installer)
-* ollama framework 
+* Python 3.10 o superior  
+* pip (instalador de paquetes de Python)  
+* framework ollama  
 
-### Setup
+### Configuración
 
-#### 1. Clone the repository.
-> ```
-> git https://github.com/spachec0/ciberlac_practices.git
-> ```
+#### 1. Clonar el repositorio.
+```bash
+git https://github.com/spachec0/ciberlac_practices.git
+```
 
-#### 2. Go to challenge directory.
-> ```
-> cd ciberlac_practices
-> ```
+#### 2. Ir al directorio del reto.
+```bash
+cd ciberlac_practices
+```
 
-#### 3. Install the dependencies.
-> ```
-> pip install -r requirements.txt
-> ```
+#### 3. Instalar las dependencias.
+```bash
+pip install -r requirements.txt
+```
 
-#### 4. Download and Run Ollama
+#### 4. Descargar y ejecutar Ollama
 
-> Download Ollama depending on your OS from https://ollama.com/download
->```
-> ollama serve (in the separate terminal)
-> ollama pull mistral
-> ollama pull llama3
-> ollama pull sqlcoder
-> ollama pull granite3.1-moe:1b
-> ollama pull granite3-guardian
+Descarga Ollama según tu sistema operativo desde [https://ollama.com/download](https://ollama.com/download)  
 
-#### 5. Access the application
+```bash
+ollama serve (en una terminal separada)
+ollama pull mistral
+ollama pull llama3
+ollama pull sqlcoder
+ollama pull granite3.1-moe:1b
+ollama pull granite3-guardian
+```
 
-> ```
-> python main.py
-> ```
-Access the application @ http://127.0.0.1:5000
+#### 5. Acceder a la aplicación
+```bash
+python main.py
+```
+Accede a la aplicación en: [http://127.0.0.1:5000](http://127.0.0.1:5000)  
 
-#### 6. Start the challenge by clicking *start* button on particular category.
+#### 6. Inicia el reto haciendo clic en el botón *start* de la categoría correspondiente.  
 
+---
 
+# Retos
 
-# Challenges
-
-Find the flag and implement a mitigation strategie.
+Encuentra la bandera y aplica una estrategia de mitigación.
 
 ## 1. Prompt Injection
 
-A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model.
+Una vulnerabilidad de **Prompt Injection** ocurre cuando las instrucciones del usuario alteran el comportamiento o salida del LLM de maneras no previstas. Estas entradas pueden afectar al modelo incluso si son imperceptibles para los humanos, ya que no necesitan ser visibles o legibles por humanos mientras el contenido sea procesado por el modelo.
 
-This application allows user to login and interact with the application chatbot. The admin has stored the secret key in his chat history. Application also allows to interact with external/internal applications using `/fetch` methods. 
+Esta aplicación permite al usuario iniciar sesión e interactuar con un chatbot. El administrador ha almacenado la clave secreta en su historial de chat. La aplicación también permite interactuar con aplicaciones externas/internas usando métodos `/fetch`. 
 
-### Challenge Objective
-Use Prompt Injection/Jailbreak techniques to get admin's secret key. 
+### Objetivo del Reto 1
+Usar técnicas de **Prompt Injection/Jailbreak** para obtener la clave secreta del administrador.  
 
-Application URL: http://127.0.0.1:5001
+URL de la aplicación: [http://127.0.0.1:5001](http://127.0.0.1:5001)  
 
-**Hint:** External URL feature can help
+**Pista:** La función de URL externa puede ayudar  
 
+---
 
 ## 2. Data and Model Poisoning
 
-Data poisoning occurs when pre-training, fine-tuning, or embedding data is manipulated to introduce vulnerabilities, backdoors, or biases. This manipulation can compromise model security, performance, or ethical behavior, leading to harmful outputs or impaired capabilities. Common risks include degraded model performance, biased or toxic content, and exploitation of downstream systems.
+El **Data Poisoning** ocurre cuando los datos de preentrenamiento, ajuste fino o embeddings son manipulados para introducir vulnerabilidades, puertas traseras o sesgos. Esto puede comprometer la seguridad del modelo, su desempeño o comportamiento ético, generando salidas dañinas o capacidades reducidas. Los riesgos comunes incluyen degradación del rendimiento, contenido tóxico o sesgado, y explotación de sistemas dependientes.
 
-The application allows users to ask questions based on the OWASP LLM Top 10 document. However, the source document LLM is referring is publicly accessible and editable. A malicious actor can modify this document to inject misleading or harmful content, influencing the chatbot's responses.
+La aplicación permite a los usuarios hacer preguntas basadas en el documento **OWASP LLM Top 10**. Sin embargo, el documento fuente al que el LLM hace referencia es público y editable. Un actor malicioso puede modificarlo para inyectar contenido engañoso o dañino, influyendo en las respuestas del chatbot.
 
-### Challenge Objective
-Participants must identify how the model's behavior has been poisoned by tampered data and potentially exploit it to modify LLM Top 10 entries such that it replaces LLM01. 
+### Objetivo del Reto 2
+Los participantes deben identificar cómo el comportamiento del modelo ha sido envenenado con datos manipulados y explotarlo para modificar las entradas del **LLM Top 10**, de forma que reemplace **LLM01**.  
 
-Application URL: http://127.0.0.1:5004
+URL de la aplicación: [http://127.0.0.1:5004](http://127.0.0.1:5004)  
 
-**Hint:** Identify the source
+**Pista:** Identifica la fuente  
 
+---
 
 ## 3. Improper Output Handling
 
-Improper Output Handling occurs when an LLM generates outputs that are not properly validated or constrained, potentially leading to security vulnerabilities. Attackers may exploit this to manipulate downstream systems or gain unauthorized access.
+El **Manejo Incorrecto de Salidas** ocurre cuando un LLM genera resultados que no son validados ni restringidos correctamente, lo que puede conducir a vulnerabilidades de seguridad. Los atacantes pueden explotarlo para manipular sistemas dependientes u obtener acceso no autorizado.
 
-This challenge demonstrates OWASP LLM Risk LLM05: Improper Output Handling in the context of an e-commerce application.
-Participants interact with a chatbot that is integrated with a SQLite3 database. Upon registration, users receive 0 credits. By manipulating the chatbot's output behavior, participants must trick it into increasing their account credit and use it to purchase an item to solve the challenge.
+Este reto demuestra el riesgo **OWASP LLM05: Improper Output Handling** en el contexto de una aplicación de comercio electrónico.  
+Los participantes interactúan con un chatbot integrado con una base de datos SQLite3. Al registrarse, los usuarios reciben 0 créditos. Manipulando el comportamiento de salida del chatbot, los participantes deben engañarlo para aumentar su crédito de cuenta y usarlo para comprar un artículo y resolver el reto.
 
-### Challenge Objective
+### Objetivo del Reto 3
+Una vez registrado, inicias sesión con 0 créditos. Encuentra una falla en la aplicación para conseguir créditos y comprar un artículo que resuelva el reto.  
 
-Once register, you login with 0 credits. Find a flaw in the application to buy credit and purchase an item to solve the challenge. 
+URL de la aplicación: [http://127.0.0.1:5005](http://127.0.0.1:5005)  
 
-Application URL: http://127.0.0.1:5005
+**Pista:** Usa *prompts* que se traduzcan en sentencias SQL y actualicen el saldo.  
 
-**Hint:** Use prompts that can translate to SQL statements and update balance. 
+---
 
+## Compatibilidad 
 
-
-
-
-## Compatibility 
-
-This project currently supports macOS and Linux systems.
-
+Este proyecto actualmente soporta sistemas macOS y Linux.

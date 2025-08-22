@@ -1,6 +1,6 @@
 # Ciberlac LLM Security Practices 
 
-## Este proyecto está dirigido a profesionales de IA para explorar riesgos potenciales en LLMs y aprender estrategias efectivas de mitigación.
+## Este proyecto explora riesgos de seguridad potenciales en LLMs y estrategias efectivas de mitigación.
 
 ## Resumen
 

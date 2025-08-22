@@ -70,7 +70,7 @@ Una vulnerabilidad de **Prompt Injection** ocurre cuando las instrucciones del u
 
 Esta aplicación permite al usuario iniciar sesión e interactuar con un chatbot. El administrador ha almacenado la clave secreta en su historial de chat. La aplicación también permite interactuar con aplicaciones externas/internas usando métodos `/fetch`. 
 
-### Objetivo del Reto 1
+### Objetivo de la práctica 1
 Usar técnicas de **Prompt Injection/Jailbreak** para obtener la clave secreta del administrador.  
 
 URL de la aplicación: [http://127.0.0.1:5001](http://127.0.0.1:5001)  
@@ -85,7 +85,7 @@ El **Data Poisoning** ocurre cuando los datos de preentrenamiento, ajuste fino o
 
 La aplicación permite a los usuarios hacer preguntas basadas en el documento **OWASP LLM Top 10**. Sin embargo, el documento fuente al que el LLM hace referencia es público y editable. Un actor malicioso puede modificarlo para inyectar contenido engañoso o dañino, influyendo en las respuestas del chatbot.
 
-### Objetivo del Reto 2
+### Objetivo de la práctica 2
 Los participantes deben identificar cómo el comportamiento del modelo ha sido envenenado con datos manipulados y explotarlo para modificar las entradas del **LLM Top 10**, de forma que reemplace **LLM01**.  
 
 URL de la aplicación: [http://127.0.0.1:5004](http://127.0.0.1:5004)  
@@ -101,7 +101,7 @@ El **Manejo Incorrecto de Salidas** ocurre cuando un LLM genera resultados que n
 Este reto demuestra el riesgo **OWASP LLM05: Improper Output Handling** en el contexto de una aplicación de comercio electrónico.  
 Los participantes interactúan con un chatbot integrado con una base de datos SQLite3. Al registrarse, los usuarios reciben 0 créditos. Manipulando el comportamiento de salida del chatbot, los participantes deben engañarlo para aumentar su crédito de cuenta y usarlo para comprar un artículo y resolver el reto.
 
-### Objetivo del Reto 3
+### Objetivo de la práctica 3
 Una vez registrado, inicias sesión con 0 créditos. Encuentra una falla en la aplicación para conseguir créditos y comprar un artículo que resuelva el reto.  
 
 URL de la aplicación: [http://127.0.0.1:5005](http://127.0.0.1:5005)  

@@ -20,12 +20,12 @@ This guide provides instructions for setting up and running the challenges.
 
 #### 1. Clone the repository.
 > ```
-> git clone https://github.com/OWASP/www-project-promptme.git
+> git https://github.com/spachec0/ciberlac_practices.git
 > ```
 
 #### 2. Go to challenge directory.
 > ```
-> cd PromptMe
+> cd ciberlac_practices
 > ```
 
 #### 3. Install the dependencies.

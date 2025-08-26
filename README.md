@@ -98,7 +98,7 @@ URL de la aplicación: [http://127.0.0.1:5004](http://127.0.0.1:5004)
 
 ## 3. Improper Output Handling
 
-El **Manejo Incorrecto de Salidas** ocurre cuando un LLM genera resultados que no son validados ni restringidos correctamente, lo que puede conducir a vulnerabilidades de seguridad. Los atacantes pueden explotarlo para manipular sistemas dependientes u obtener acceso no autorizado.
+El **Improper Output Handling** ocurre cuando un LLM genera resultados que no son validados ni restringidos correctamente, lo que puede conducir a vulnerabilidades de seguridad. Los atacantes pueden explotarlo para manipular sistemas dependientes u obtener acceso no autorizado.
 
 Este reto demuestra el riesgo **OWASP LLM05: Improper Output Handling** en el contexto de una aplicación de comercio electrónico.  
 Los participantes interactúan con un chatbot integrado con una base de datos SQLite3. Al registrarse, los usuarios reciben 0 créditos. Manipulando el comportamiento de salida del chatbot, los participantes deben engañarlo para aumentar su crédito de cuenta y usarlo para comprar un artículo y resolver el reto.

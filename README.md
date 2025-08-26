@@ -64,7 +64,7 @@ Este proyecto actualmente soporta sistemas macOS y Linux.
 
 Encuentra la bandera y aplica una estrategia de mitigación.
 
-## 1. Prompt Injection
+## 1. Prompt Injection (LLM01)
 
 Una vulnerabilidad de **Prompt Injection** ocurre cuando las instrucciones del usuario alteran el comportamiento o salida del LLM de maneras no previstas. Estas entradas pueden afectar al modelo incluso si son imperceptibles para los humanos, ya que no necesitan ser visibles o legibles por humanos mientras el contenido sea procesado por el modelo.
 
@@ -80,7 +80,7 @@ URL de la aplicación: [http://127.0.0.1:5001](http://127.0.0.1:5001)
 
 ---
 
-## 2. Data and Model Poisoning
+## 2. Data and Model Poisoning (LLM04)
 
 El **Data Poisoning** ocurre cuando los datos de preentrenamiento, ajuste fino o embeddings son manipulados para introducir vulnerabilidades, puertas traseras o sesgos. Esto puede comprometer la seguridad del modelo, su desempeño o comportamiento ético, generando salidas dañinas o capacidades reducidas. Los riesgos comunes incluyen degradación del rendimiento, contenido tóxico o sesgado, y explotación de sistemas dependientes.
 
@@ -96,7 +96,7 @@ URL de la aplicación: [http://127.0.0.1:5004](http://127.0.0.1:5004)
 
 ---
 
-## 3. Improper Output Handling
+## 3. Improper Output Handling (LLM05)
 
 El **Improper Output Handling** ocurre cuando un LLM genera resultados que no son validados ni restringidos correctamente, lo que puede conducir a vulnerabilidades de seguridad. Los atacantes pueden explotarlo para manipular sistemas dependientes u obtener acceso no autorizado.
 

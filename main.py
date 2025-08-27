@@ -57,13 +57,13 @@ def start_challenge_route(challenge_id):
     client_host = request.host.split(":")[0]
     if challenge_id == 1:
         port = 5001
-        app_path = "challenges/LLM01_Prompt_Injection/app1.py"
+        app_path = "challenges/Prompt_Injection/app1.py"
     elif challenge_id == 4:
         port = 5004
-        app_path = "challenges/LLM04_Data_and_Model_Poisoning/app4.py"
+        app_path = "challenges/Data_and_Model_Poisoning/app4.py"
     elif challenge_id == 5:
         port = 5005
-        app_path = "challenges/LLM05_Improper_Output_Handling/app5.py"
+        app_path = "challenges/Improper_Output_Handling/app5.py"
     else:
         return "Unknown Challenge ID", 404
 

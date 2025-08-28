@@ -65,10 +65,10 @@ def reload_knowledge_base():
         question_embeddings = embedding_model.encode(csv_questions, convert_to_tensor=True)
         print("CSV_PATH:", CSV_PATH)
         print("File exists:", os.path.exists(CSV_PATH))
-        print(f"✅ Reloaded {len(qa_knowledge)} Q&A entries from local file")
+        print(f"Reloaded {len(qa_knowledge)} Q&A entries from local file")
         return True
     except Exception as e:
-        print("❌ Failed to reload knowledge base:", e)
+        print("Failed to reload knowledge base:", e)
         return False
 
 
